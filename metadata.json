@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Code Reviewer",
+  "description": "Nástroj s umělou inteligencí, který využívá Gemini k automatické kontrole vašeho kódu a poskytuje zpětnou vazbu ohledně správnosti, osvědčených postupů, výkonu a bezpečnosti.",
+  "requestFramePermissions": []
+}

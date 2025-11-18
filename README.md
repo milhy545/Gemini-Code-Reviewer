@@ -51,10 +51,16 @@ cd gemini-code-reviewer
 npm install
 ```
 
-3. **Nastavte API klíč**
-Vytvořte `.env.local` soubor v kořenové složce:
+3. **Spusťte setup (doporučeno)**
+```bash
+npm run setup
+```
+Setup vás provede nastavením API klíče a volbou portu.
+
+**Nebo manuálně:** Vytvořte `.env.local` soubor:
 ```env
 API_KEY=váš_gemini_api_klíč
+PORT=5173  # volitelné, výchozí je 5173
 ```
 
 4. **Spusťte dev server**
@@ -62,7 +68,7 @@ API_KEY=váš_gemini_api_klíč
 npm run dev
 ```
 
-Aplikace běží na `http://localhost:3000`
+Aplikace běží na `http://localhost:5173` (nebo vlastním portu)
 
 ### Build pro produkci
 

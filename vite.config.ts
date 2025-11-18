@@ -4,10 +4,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    // Allow port to be set via environment variable, default to 5173
+    const port = parseInt(env.PORT || '5173', 10);
+
     return {
       server: {
-        port: 3000,
+        port: port,
         host: '0.0.0.0',
+        strictPort: false, // Allow Vite to use next available port if taken
       },
       plugins: [react()],
       define: {

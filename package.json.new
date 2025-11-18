@@ -1,0 +1,32 @@
+{
+  "name": "gemini-code-reviewer-monorepo",
+  "version": "2.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "web:dev": "turbo run dev --filter=web",
+    "extension:dev": "turbo run dev --filter=extension",
+    "desktop:dev": "turbo run dev --filter=desktop",
+    "web:build": "turbo run build --filter=web",
+    "extension:build": "turbo run build --filter=extension",
+    "desktop:build": "turbo run build --filter=desktop"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "typescript": "^5.8.2",
+    "@types/node": "^22.14.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@8.15.0"
+}

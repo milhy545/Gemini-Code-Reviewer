@@ -48,31 +48,31 @@ const FeedbackDisplay: React.FC<FeedbackDisplayProps> = ({ feedback }) => {
 
   if (!feedback) {
     return (
-      <div className="flex flex-col items-center justify-center h-full text-center text-gray-500">
-        <SparklesIcon className="w-16 h-16 mb-4" />
-        <h3 className="text-lg font-semibold">Zpětná vazba ke kódu</h3>
+      <div className="flex flex-col items-center justify-center h-full text-center text-gray-400 dark:text-gray-500 bg-white dark:bg-gray-900 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700">
+        <SparklesIcon className="w-16 h-16 mb-4 text-gray-300 dark:text-gray-600" />
+        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">Zpětná vazba ke kódu</h3>
         <p className="text-sm">Vaše revize kódu se zde zobrazí.</p>
       </div>
     );
   }
 
   return (
-    <div className="h-full bg-gray-900 rounded-lg border border-gray-700 text-gray-300 flex flex-col">
-       <div className="flex items-center justify-between p-3 border-b border-gray-700">
-        <h2 className="text-lg font-bold text-white flex items-center gap-3">
-            <SparklesIcon className="w-6 h-6 text-indigo-400" />
+    <div className="h-full bg-white dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 flex flex-col shadow-sm">
+       <div className="flex items-center justify-between p-3 border-b border-gray-300 dark:border-gray-700">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-3">
+            <SparklesIcon className="w-6 h-6 text-indigo-500 dark:text-indigo-400" />
             Revize kódu
         </h2>
         <button
             onClick={handleToggleSpeech}
-            className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-300 bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
             title={isSpeaking ? "Zastavit čtení" : "Přečíst nahlas"}
         >
             {isSpeaking ? <SpeakerXMarkIcon className="w-5 h-5" /> : <SpeakerWaveIcon className="w-5 h-5" />}
         </button>
        </div>
       <div className="p-6 overflow-y-auto flex-grow">
-        <div className="prose prose-invert prose-sm max-w-none">
+        <div className="prose dark:prose-invert prose-sm max-w-none">
           {/* Using a simple pre-wrap to display markdown-formatted text */}
           <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'sans-serif' }}>{feedback}</div>
         </div>

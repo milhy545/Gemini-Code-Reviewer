@@ -28,12 +28,12 @@ const CodeInput: React.FC<CodeInputProps> = ({ code, onCodeChange, onFileRead, l
   };
 
   return (
-    <div className="flex flex-col h-full bg-gray-900 rounded-lg border border-gray-700">
-      <div className="flex items-center justify-between p-3 border-b border-gray-700">
-        <span className="text-sm font-medium text-gray-300">Váš kód</span>
+    <div className="flex flex-col h-full bg-white dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-700 shadow-sm">
+      <div className="flex items-center justify-between p-3 border-b border-gray-300 dark:border-gray-700">
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Váš kód</span>
         <button
           onClick={handleUploadClick}
-          className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-300 bg-gray-800 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
           title="Nahrát soubor"
         >
           <UploadIcon className="w-4 h-4" />
@@ -50,7 +50,7 @@ const CodeInput: React.FC<CodeInputProps> = ({ code, onCodeChange, onFileRead, l
       <textarea
         value={code}
         onChange={(e) => onCodeChange(e.target.value)}
-        className="w-full h-full p-4 font-mono text-sm text-gray-200 bg-transparent resize-none focus:outline-none"
+        className="w-full h-full p-4 font-mono text-sm text-gray-900 dark:text-gray-200 bg-transparent resize-none focus:outline-none placeholder-gray-400 dark:placeholder-gray-500"
         placeholder="Vložte svůj kód zde..."
         spellCheck="false"
       />

@@ -10,6 +10,8 @@ export { StatsPanel } from './StatsPanel.js';
 export { HelpModal } from './HelpModal.js';
 export { ExportMenu } from './ExportMenu.js';
 export { ProgressBar } from './ProgressBar.js';
+export { BatchReview } from './BatchReview.js';
+export { SnippetsLibrary } from './SnippetsLibrary.js';
 
 // Icon exports
 export * from './icons/SparklesIcon.js';

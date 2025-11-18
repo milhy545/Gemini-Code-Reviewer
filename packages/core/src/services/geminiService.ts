@@ -75,7 +75,7 @@ export const reviewCode = async (
       model,
       contents: prompt,
     });
-    return response.text;
+    return response.text || '';
   } catch (error) {
     console.error("Error calling Gemini API:", error);
     if (error instanceof Error) {
@@ -125,7 +125,7 @@ export const correctCode = async (
       contents: prompt,
     });
     // Clean the response to only get the code within the markdown block
-    const text = response.text;
+    const text = response.text || '';
     const codeBlockRegex = /```(?:[a-zA-Z0-9]*)?\n([\s\S]*?)```/;
     const match = text.match(codeBlockRegex);
     return match ? match[1].trim() : text.trim();

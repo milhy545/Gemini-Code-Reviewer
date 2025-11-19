@@ -23,13 +23,13 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-react':
         specifier: ^5.0.0
-        version: 5.1.1(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))
+        version: 5.1.1(vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1))
       typescript:
         specifier: ~5.8.2
         version: 5.8.3
       vite:
-        specifier: ^6.2.0
-        version: 6.4.1(@types/node@22.19.1)(jiti@2.6.1)
+        specifier: ^7.0.0
+        version: 7.2.2(@types/node@22.19.1)(jiti@2.6.1)
 
   apps/desktop:
     dependencies:
@@ -63,13 +63,13 @@ importers:
         version: 19.2.3(@types/react@19.2.6)
       '@vitejs/plugin-react':
         specifier: ^5.0.0
-        version: 5.1.1(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))
+        version: 5.1.1(vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1))
       typescript:
         specifier: ^5.8.2
         version: 5.8.3
       vite:
-        specifier: ^6.2.0
-        version: 6.4.1(@types/node@22.19.1)(jiti@2.6.1)
+        specifier: ^7.0.0
+        version: 7.2.2(@types/node@22.19.1)(jiti@2.6.1)
 
   apps/extension:
     dependencies:
@@ -103,7 +103,7 @@ importers:
         version: 0.12.4
       '@wxt-dev/module-react':
         specifier: ^1.1.1
-        version: 1.1.5(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))(wxt@0.19.29(@types/node@22.19.1)(rollup@4.53.2))
+        version: 1.1.5(vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1))(wxt@0.19.29(@types/node@22.19.1)(rollup@4.53.2))
       typescript:
         specifier: ^5.8.2
         version: 5.8.3
@@ -143,13 +143,13 @@ importers:
         version: 19.2.3(@types/react@19.2.6)
       '@vitejs/plugin-react':
         specifier: ^5.0.0
-        version: 5.1.1(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))
+        version: 5.1.1(vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1))
       typescript:
         specifier: ^5.8.2
         version: 5.8.3
       vite:
-        specifier: ^6.2.0
-        version: 6.4.1(@types/node@22.19.1)(jiti@2.6.1)
+        specifier: ^7.0.0
+        version: 7.2.2(@types/node@22.19.1)(jiti@2.6.1)
 
   packages/core:
     dependencies:
@@ -2198,6 +2198,46 @@ packages:
       yaml:
         optional: true
 
+  vite@7.2.2:
+    resolution: {integrity: sha512-BxAKBWmIbrDgrokdGZH1IgkIk/5mMHDreLDmCJ0qpyJaAteP8NvMhkwr/ZCQNqNH97bw/dANTE9PDzqwJghfMQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^20.19.0 || >=22.12.0
+      jiti: '>=1.21.0'
+      less: ^4.0.0
+      lightningcss: ^1.21.0
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      yaml: ^2.4.2
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      jiti:
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
+        optional: true
+
   watchpack@2.4.4:
     resolution: {integrity: sha512-c5EGNOiyxxV5qmTtAB7rbiXxi1ooX1pQKMLX/MIabJjRA0SJBQOjKF+KSVfHkr9U1cADPon0mRiVe/riyaiDUA==}
     engines: {node: '>=10.13.0'}
@@ -2782,7 +2822,7 @@ snapshots:
 
   '@types/webextension-polyfill@0.12.4': {}
 
-  '@vitejs/plugin-react@5.1.1(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))':
+  '@vitejs/plugin-react@5.1.1(vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.5)
@@ -2790,7 +2830,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.47
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 6.4.1(@types/node@22.19.1)(jiti@2.6.1)
+      vite: 7.2.2(@types/node@22.19.1)(jiti@2.6.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -2809,9 +2849,9 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@wxt-dev/module-react@1.1.5(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))(wxt@0.19.29(@types/node@22.19.1)(rollup@4.53.2))':
+  '@wxt-dev/module-react@1.1.5(vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1))(wxt@0.19.29(@types/node@22.19.1)(rollup@4.53.2))':
     dependencies:
-      '@vitejs/plugin-react': 5.1.1(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))
+      '@vitejs/plugin-react': 5.1.1(vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1))
       wxt: 0.19.29(@types/node@22.19.1)(rollup@4.53.2)
     transitivePeerDependencies:
       - supports-color
@@ -4196,7 +4236,7 @@ snapshots:
       debug: 4.4.3
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 6.4.1(@types/node@22.19.1)(jiti@2.6.1)
+      vite: 7.2.2(@types/node@22.19.1)(jiti@2.6.1)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4212,6 +4252,19 @@ snapshots:
       - yaml
 
   vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1):
+    dependencies:
+      esbuild: 0.25.12
+      fdir: 6.5.0(picomatch@4.0.3)
+      picomatch: 4.0.3
+      postcss: 8.5.6
+      rollup: 4.53.2
+      tinyglobby: 0.2.15
+    optionalDependencies:
+      '@types/node': 22.19.1
+      fsevents: 2.3.3
+      jiti: 2.6.1
+
+  vite@7.2.2(@types/node@22.19.1)(jiti@2.6.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)

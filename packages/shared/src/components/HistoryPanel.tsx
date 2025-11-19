@@ -1,6 +1,6 @@
 // History panel component for viewing past code reviews
 import React, { useState } from 'react';
-import { ReviewHistoryItem } from '../types';
+import { ReviewHistoryItem } from '@gemini-reviewer/core';
 
 interface HistoryPanelProps {
   isOpen: boolean;
@@ -26,7 +26,7 @@ export const HistoryPanel: React.FC<HistoryPanelProps> = ({
   const filteredHistory = history.filter(item =>
     item.language.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.fullCode.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.codeSnippet.toLowerCase().includes(searchQuery.toLowerCase())
+    item.fullCode.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const formatDate = (timestamp: number) => {
@@ -128,7 +128,7 @@ export const HistoryPanel: React.FC<HistoryPanelProps> = ({
                   </button>
                 </div>
                 <p className="text-sm text-gray-700 dark:text-gray-300 font-mono line-clamp-2">
-                  {item.codeSnippet}
+                  {item.fullCode}
                 </p>
                 <div className="mt-2 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
                   {item.reviewResult && (

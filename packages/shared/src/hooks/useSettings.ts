@@ -1,17 +1,16 @@
 // Custom hook for app settings management
 import { useState, useEffect } from 'react';
-import { Settings } from '../types';
+import { Settings } from '@gemini-reviewer/core';
 import { storage } from '../utils/storage';
 
 const DEFAULT_SETTINGS: Settings = {
-  theme: 'dark',
   aiModel: 'gemini-2.5-flash',
   reviewFocus: 'complete',
-  uiLanguage: 'cs',
+  language: 'cs',
   autoSaveHistory: true,
-  showLineNumbers: true,
-  enableSyntaxHighlight: true,
-  soundEnabled: true,
+  darkMode: true,
+  ttsEnabled: true,
+  maxHistoryItems: 50,
 };
 
 export const useSettings = () => {

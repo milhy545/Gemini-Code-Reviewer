@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Header, CodeInput, Settings } from '@gemini-reviewer/shared';
 import { reviewCode } from '@gemini-reviewer/core';
-import './sidepanel.css';
 
 function SidePanelApp() {
   const [code, setCode] = React.useState('');
@@ -66,11 +65,5 @@ function SidePanelApp() {
   );
 }
 
-// Mount app
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <SidePanelApp />
-  </React.StrictMode>
-);
 
 export default SidePanelApp;

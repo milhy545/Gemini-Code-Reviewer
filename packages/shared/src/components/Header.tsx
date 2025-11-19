@@ -1,7 +1,7 @@
 // Header component with theme toggle, settings, and navigation
 import React from 'react';
-import { Theme } from '../types';
-import { APP_INFO } from '../constants';
+import { Theme } from '@gemini-reviewer/core';
+import { APP_INFO } from '@gemini-reviewer/core';
 
 interface HeaderProps {
   theme: Theme;

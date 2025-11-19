@@ -1,6 +1,6 @@
 // Help modal with keyboard shortcuts and about info
 import React from 'react';
-import { APP_INFO } from '../constants';
+import { APP_INFO } from '@gemini-reviewer/core';
 
 interface HelpModalProps {
   isOpen: boolean;

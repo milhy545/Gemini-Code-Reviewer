@@ -1,5 +1,5 @@
 // Analytics tracking utility
-import { AnalyticsData, AIModel } from '../types';
+import { AnalyticsData, AIModel } from '@gemini-reviewer/core';
 import { storage } from './storage';
 
 const DEFAULT_ANALYTICS: AnalyticsData = {
@@ -7,8 +7,10 @@ const DEFAULT_ANALYTICS: AnalyticsData = {
   totalCorrections: 0,
   languageUsage: {},
   modelUsage: {} as Record<AIModel, number>,
-  averageProcessingTime: 0,
-  lastUsed: Date.now(),
+  avgProcessingTime: 0,
+  totalProcessingTime: 0,
+  sessionsCount: 0,
+  lastSession: Date.now(),
 };
 
 export const analytics = {
@@ -27,10 +29,10 @@ export const analytics = {
 
     // Update average processing time
     const totalOperations = data.totalReviews + data.totalCorrections;
-    data.averageProcessingTime =
-      (data.averageProcessingTime * (totalOperations - 1) + processingTime) / totalOperations;
+    data.avgProcessingTime =
+      (data.avgProcessingTime * (totalOperations - 1) + processingTime) / totalOperations;
 
-    data.lastUsed = Date.now();
+    data.lastSession = Date.now();
 
     storage.setAnalytics(data);
   },
@@ -45,10 +47,10 @@ export const analytics = {
 
     // Update average processing time
     const totalOperations = data.totalReviews + data.totalCorrections;
-    data.averageProcessingTime =
-      (data.averageProcessingTime * (totalOperations - 1) + processingTime) / totalOperations;
+    data.avgProcessingTime =
+      (data.avgProcessingTime * (totalOperations - 1) + processingTime) / totalOperations;
 
-    data.lastUsed = Date.now();
+    data.lastSession = Date.now();
 
     storage.setAnalytics(data);
   },

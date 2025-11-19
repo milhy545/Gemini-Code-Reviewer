@@ -1,6 +1,6 @@
 // Custom hook for theme management with persistence
 import { useState, useEffect } from 'react';
-import { Theme } from '../types';
+import { Theme } from '@gemini-reviewer/core';
 import { storage } from '../utils/storage';
 
 const THEME_STORAGE_KEY = 'gemini-code-reviewer-theme';

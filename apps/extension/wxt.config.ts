@@ -1,6 +1,15 @@
 import { defineConfig } from 'wxt';
+import path from 'path';
 
 export default defineConfig({
+  vite: () => ({
+    resolve: {
+      alias: {
+        '@gemini-reviewer/core': path.resolve(__dirname, '../../packages/core/src'),
+        '@gemini-reviewer/shared': path.resolve(__dirname, '../../packages/shared/src'),
+      },
+    },
+  }),
   manifest: {
     name: 'Gemini Code Reviewer',
     description: 'AI-powered code review pomocí Google Gemini',

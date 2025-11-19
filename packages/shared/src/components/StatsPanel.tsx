@@ -1,6 +1,6 @@
 // Statistics and Analytics panel component
 import React from 'react';
-import { AnalyticsData } from '../types';
+import { AnalyticsData } from '@gemini-reviewer/core';
 
 interface StatsPanelProps {
   isOpen: boolean;
@@ -87,7 +87,7 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({
                 Průměrný čas
               </div>
               <div className="text-3xl font-bold text-orange-900 dark:text-orange-100">
-                {analytics.averageProcessingTime.toFixed(1)}s
+                {analytics.avgProcessingTime.toFixed(1)}s
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export const StatsPanel: React.FC<StatsPanelProps> = ({
 
           {/* Last Used */}
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center mb-4">
-            Poslední použití: {new Date(analytics.lastUsed).toLocaleString('cs-CZ')}
+            Poslední použití: {new Date(analytics.lastSession).toLocaleString('cs-CZ')}
           </div>
 
           {/* Footer */}

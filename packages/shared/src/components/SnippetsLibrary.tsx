@@ -34,7 +34,7 @@ export const SnippetsLibrary: React.FC<SnippetsLibraryProps> = ({
   // Load snippets from storage
   useEffect(() => {
     const loadSnippets = () => {
-      const saved = storage.get<CodeSnippet[]>('codeSnippets', []);
+      const saved = storage.get<CodeSnippet[]>('fullCodes', []);
       setSnippets(saved);
     };
     loadSnippets();
@@ -42,7 +42,7 @@ export const SnippetsLibrary: React.FC<SnippetsLibraryProps> = ({
 
   // Save snippets to storage
   const saveSnippets = (newSnippets: CodeSnippet[]) => {
-    storage.set('codeSnippets', newSnippets);
+    storage.set('fullCodes', newSnippets);
     setSnippets(newSnippets);
   };
 

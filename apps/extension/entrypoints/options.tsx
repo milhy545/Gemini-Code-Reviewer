@@ -137,10 +137,4 @@ function OptionsApp() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <OptionsApp />
-  </React.StrictMode>
-);
-
 export default OptionsApp;

@@ -1,6 +1,6 @@
 // Custom hook for managing code review history
 import { useState, useEffect } from 'react';
-import { ReviewHistoryItem, AIModel, ReviewFocus } from '../types';
+import { ReviewHistoryItem, AIModel, ReviewFocus } from '@gemini-reviewer/core';
 import { storage } from '../utils/storage';
 
 const MAX_HISTORY_ITEMS = 50; // Limit to prevent localStorage overflow
@@ -27,11 +27,10 @@ export const useHistory = () => {
       id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: Date.now(),
       language,
-      codeSnippet: code.substring(0, 100) + (code.length > 100 ? '...' : ''),
       fullCode: code,
       reviewResult,
       correctionResult,
-      model,
+      aiModel: model,
       reviewFocus,
     };
 
@@ -60,7 +59,7 @@ export const useHistory = () => {
     return history.filter(item =>
       item.language.toLowerCase().includes(lowerQuery) ||
       item.fullCode.toLowerCase().includes(lowerQuery) ||
-      item.codeSnippet.toLowerCase().includes(lowerQuery)
+      item.fullCode.toLowerCase().includes(lowerQuery)
     );
   };
 

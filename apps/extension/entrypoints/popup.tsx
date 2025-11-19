@@ -149,10 +149,5 @@ function PopupApp() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <PopupApp />
-  </React.StrictMode>
-);
 
 export default PopupApp;

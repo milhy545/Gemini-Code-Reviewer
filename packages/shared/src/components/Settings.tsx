@@ -1,7 +1,7 @@
 // Settings modal component
 import React from 'react';
-import { Settings as SettingsType } from '../types';
-import { AI_MODELS, REVIEW_PRESETS, UI_LANGUAGES } from '../constants';
+import { Settings as SettingsType } from '@gemini-reviewer/core';
+import { AI_MODELS, REVIEW_PRESETS, UI_LANGUAGES } from '@gemini-reviewer/core';
 
 interface SettingsProps {
   isOpen: boolean;
@@ -109,8 +109,8 @@ export const Settings: React.FC<SettingsProps> = ({
                 Jazyk rozhraní
               </label>
               <select
-                value={settings.uiLanguage}
-                onChange={(e) => onUpdate({ uiLanguage: e.target.value as any })}
+                value={settings.language}
+                onChange={(e) => onUpdate({ language: e.target.value as any })}
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500"
               >
                 {UI_LANGUAGES.map((lang) => (
@@ -141,59 +141,11 @@ export const Settings: React.FC<SettingsProps> = ({
                 </button>
               </label>
 
-              <label className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Zobrazit čísla řádků
-                </span>
-                <button
-                  onClick={() => onUpdate({ showLineNumbers: !settings.showLineNumbers })}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.showLineNumbers ? 'bg-indigo-600' : 'bg-gray-300 dark:bg-gray-600'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.showLineNumbers ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </label>
+              
 
-              <label className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Syntax highlighting
-                </span>
-                <button
-                  onClick={() => onUpdate({ enableSyntaxHighlight: !settings.enableSyntaxHighlight })}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.enableSyntaxHighlight ? 'bg-indigo-600' : 'bg-gray-300 dark:bg-gray-600'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.enableSyntaxHighlight ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </label>
+              
 
-              <label className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  Zvuky
-                </span>
-                <button
-                  onClick={() => onUpdate({ soundEnabled: !settings.soundEnabled })}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.soundEnabled ? 'bg-indigo-600' : 'bg-gray-300 dark:bg-gray-600'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.soundEnabled ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </label>
+              
             </div>
           </div>
 

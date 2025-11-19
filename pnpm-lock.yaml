@@ -99,8 +99,8 @@ importers:
         specifier: ^19.0.0
         version: 19.2.3(@types/react@19.2.6)
       '@types/webextension-polyfill':
-        specifier: ^0.10.7
-        version: 0.10.7
+        specifier: ^0.12.0
+        version: 0.12.4
       '@wxt-dev/module-react':
         specifier: ^1.1.1
         version: 1.1.5(vite@6.4.1(@types/node@22.19.1)(jiti@2.6.1))(wxt@0.19.29(@types/node@22.19.1)(rollup@4.53.2))
@@ -758,9 +758,6 @@ packages:
 
   '@types/react@19.2.6':
     resolution: {integrity: sha512-p/jUvulfgU7oKtj6Xpk8cA2Y1xKTtICGpJYeJXz2YVO2UcvjQgeRMLDGfDeqeRW2Ta+0QNFwcc8X3GH8SxZz6w==}
-
-  '@types/webextension-polyfill@0.10.7':
-    resolution: {integrity: sha512-10ql7A0qzBmFB+F+qAke/nP1PIonS0TXZAOMVOxEUsm+lGSW6uwVcISFNa0I4Oyj0884TZVWGGMIWeXOVSNFHw==}
 
   '@types/webextension-polyfill@0.12.4':
     resolution: {integrity: sha512-wK8YdSI0pDiaehSLDIvtvonYmLwUUivg4Z6JCJO8rkyssMAG82cFJgwPK/V7NO61mJBLg/tXeoXQL8AFzpXZmQ==}
@@ -2782,8 +2779,6 @@ snapshots:
   '@types/react@19.2.6':
     dependencies:
       csstype: 3.2.3
-
-  '@types/webextension-polyfill@0.10.7': {}
 
   '@types/webextension-polyfill@0.12.4': {}
 

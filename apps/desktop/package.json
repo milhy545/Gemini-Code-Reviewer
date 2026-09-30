@@ -16,7 +16,7 @@
     "react-dom": "^19.2.0",
     "@gemini-reviewer/shared": "workspace:*",
     "@gemini-reviewer/core": "workspace:*",
-    "@google/genai": "^1.23.0",
+    "@google/genai": "^2.24.0",
     "@tauri-apps/api": "^2.0.0"
   },
   "devDependencies": {
